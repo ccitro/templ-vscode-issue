@@ -1,0 +1,19 @@
+package components
+
+type ExampleButtonParams struct {
+    Text string
+}
+
+templ ExampleButton(params ExampleButtonParams) {
+    <button>{params.Text}</button>
+}
+
+templ ExampleCaller() {
+    @ExampleButton(ExampleButtonParams{
+        Text: "Hello World",
+    })
+}
+
+templ ExampleProblem() {
+    <div>Not highlighted correctly</div>
+}
